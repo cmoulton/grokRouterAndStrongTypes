@@ -13,6 +13,7 @@
 		CF30474A1BD68D950006CC45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3047491BD68D950006CC45 /* Assets.xcassets */; };
 		CF30474D1BD68D950006CC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30474B1BD68D950006CC45 /* LaunchScreen.storyboard */; };
 		CF3047551BD6B4490006CC45 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047541BD6B4490006CC45 /* Post.swift */; settings = {ASSET_TAGS = (); }; };
+		CF3047571BD6B54A0006CC45 /* PostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047561BD6B54A0006CC45 /* PostRouter.swift */; settings = {ASSET_TAGS = (); }; };
 		F9C0C3FF6EAE94276DBB0F12 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4760E9C570FEB270DA3A0C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		CF30474C1BD68D950006CC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF30474E1BD68D950006CC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF3047541BD6B4490006CC45 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CF3047561BD6B54A0006CC45 /* PostRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				CF3047421BD68D950006CC45 /* AppDelegate.swift */,
 				CF3047441BD68D950006CC45 /* ViewController.swift */,
 				CF3047541BD6B4490006CC45 /* Post.swift */,
+				CF3047561BD6B54A0006CC45 /* PostRouter.swift */,
 				CF3047461BD68D950006CC45 /* Main.storyboard */,
 				CF3047491BD68D950006CC45 /* Assets.xcassets */,
 				CF30474B1BD68D950006CC45 /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				CF3047551BD6B4490006CC45 /* Post.swift in Sources */,
 				CF3047451BD68D950006CC45 /* ViewController.swift in Sources */,
+				CF3047571BD6B54A0006CC45 /* PostRouter.swift in Sources */,
 				CF3047431BD68D950006CC45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
