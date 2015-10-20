@@ -30,6 +30,23 @@ class Post:ResponseJSONObjectSerializable {
     self.userId = json["userId"].int
   }
   
+  func toJSON() -> Dictionary<String, AnyObject> {
+    var json = Dictionary<String, AnyObject>()
+    if let title = title {
+      json["title"] = title
+    }
+    if let body = body {
+      json["body"] = body
+    }
+    if let id = id {
+      json["id"] = id
+    }
+    if let userId = userId {
+      json["userId"] = userId
+    }
+    return json
+  }
+  
   func description() -> String {
     return "ID: \(self.id)" +
       "User ID: \(self.userId)" +
@@ -43,5 +60,17 @@ class Post:ResponseJSONObjectSerializable {
       .responseObject { (response: Response<Post, NSError>) in
         completionHandler(response.result)
       }
+  }
+  
+  // POST / Create
+  func save(completionHandler: (Result<Post, NSError>) -> Void) {
+    guard let fields:Dictionary<String, AnyObject> = self.toJSON() else {
+      print("error: error converting newPost fields to JSON")
+      return
+    }
+    Alamofire.request(PostRouter.Create(fields))
+      .responseObject { (response: Response<Post, NSError>) in
+        completionHandler(response.result)
+    }
   }
 }

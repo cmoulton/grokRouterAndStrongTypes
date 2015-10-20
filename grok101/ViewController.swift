@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     super.viewWillAppear(animated)
     
     // MARK: Get Post #1
-    Post.postByID(1, completionHandler: { result in
+    /*Post.postByID(1, completionHandler: { result in
       if let error = result.error {
         // got an error in getting the data, need to handle it
         print("error calling POST on /posts")
@@ -33,32 +33,29 @@ class ViewController: UIViewController {
       // success!
       print(post.description())
       print(post.title)
-    })
+    })*/
     
     // MARK: POST
     // Create new post
-    /*var newPost = Post(aTitle: "Frist Psot", aBody: "I iz fisrt", anId: nil, aUserId: 1)
-    if (newPost == nil)
-    {
+    guard let newPost = Post(aTitle: "Frist Psot", aBody: "I iz fisrt", anId: nil, aUserId: 1) else {
       print("error: newPost isn't a Post")
       return
-    }*/
-    /*newPost!.save({ (post, error) in
-      if let anError = error
-      {
+    }
+    newPost.save { result in
+      if let error = result.error {
         // got an error in getting the data, need to handle it
         print("error calling POST on /posts")
-        print(anError)
+        print(error)
         return
       }
-      if post == nil {
+      guard let post = result.value else {
         print("error calling POST on /posts: result is nil")
         return
       }
       // success!
-      print(post!.description())
-      print(post!.title)
-    })*/
+      print(post.description())
+      print(post.title)
+    }
   }
 
   override func didReceiveMemoryWarning() {
