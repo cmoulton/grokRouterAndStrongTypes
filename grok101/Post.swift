@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
-class Post {
+class Post:ResponseJSONObjectSerializable {
   var title:String?
   var body:String?
   var id:Int?
@@ -21,10 +23,25 @@ class Post {
     self.userId = aUserId
   }
   
+  required init?(json: SwiftyJSON.JSON) {
+    self.title = json["title"].string
+    self.body = json["body"].string
+    self.id = json["id"].int
+    self.userId = json["userId"].int
+  }
+  
   func description() -> String {
     return "ID: \(self.id)" +
       "User ID: \(self.userId)" +
       "Title: \(self.title)\n" +
     "Body: \(self.body)\n"
+  }
+
+  // MARK: API Calls
+  class func postByID(id: Int, completionHandler: (Result<Post, NSError>) -> Void) {
+    Alamofire.request(PostRouter.Get(id))
+      .responseObject { (response: Response<Post, NSError>) in
+        completionHandler(response.result)
+      }
   }
 }
