@@ -12,10 +12,10 @@
 		CF3047481BD68D950006CC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3047461BD68D950006CC45 /* Main.storyboard */; };
 		CF30474A1BD68D950006CC45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3047491BD68D950006CC45 /* Assets.xcassets */; };
 		CF30474D1BD68D950006CC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30474B1BD68D950006CC45 /* LaunchScreen.storyboard */; };
-		CF3047551BD6B4490006CC45 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047541BD6B4490006CC45 /* Post.swift */; settings = {ASSET_TAGS = (); }; };
-		CF3047571BD6B54A0006CC45 /* PostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047561BD6B54A0006CC45 /* PostRouter.swift */; settings = {ASSET_TAGS = (); }; };
-		CF3047591BD6B8860006CC45 /* AlamofireRequest+JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047581BD6B8860006CC45 /* AlamofireRequest+JSONSerializable.swift */; settings = {ASSET_TAGS = (); }; };
-		F9C0C3FF6EAE94276DBB0F12 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4760E9C570FEB270DA3A0C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CF3047551BD6B4490006CC45 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047541BD6B4490006CC45 /* Post.swift */; };
+		CF3047571BD6B54A0006CC45 /* PostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047561BD6B54A0006CC45 /* PostRouter.swift */; };
+		CF3047591BD6B8860006CC45 /* AlamofireRequest+JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3047581BD6B8860006CC45 /* AlamofireRequest+JSONSerializable.swift */; };
+		F9C0C3FF6EAE94276DBB0F12 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4760E9C570FEB270DA3A0C /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
